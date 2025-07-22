@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Open Music</title>
+    <link rel="stylesheet" href="styles/globalStyles.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1><span>open</span> <strong>music</strong></h1>
+        <button id="theme-toggle">🌙</button>
+      </header>
+
+      <main>
+        <section class="filters">
+          <h2>Gênero Musical</h2>
+          <div class="genres">
+            <button class="active">Todos</button>
+            <button>Pop</button>
+            <button>MPB</button>
+            <button>Forró</button>
+            <button>Samba</button>
+            <button>Baião</button>
+            <button>Rap</button>
+            <button>Hip-Hop</button>
+          </div>
+
+          <div class="price-filter">
+            <label for="priceRange">Definir Preço</label>
+            <div class="range-wrapper">
+              <input type="range" id="priceRange" min="0" max="150" value="100" />
+              <span>Até <strong>R$ <span id="priceValue">100</span></strong></span>
+            </div>
+          </div>
+        </section>
+
+        <section class="albums">
+          <h2>Albuns Encontrados</h2>
+          <div class="album-grid">
+            <!-- Card 1 -->
+            <div class="album-card">
+              <img src="scr/imgs/img_1.jpg" alt="Acabou o Chorare" />
+              <h3>Acabou o Chorare</h3>
+              <p class="artist">Novos Baianos</p>
+              <p class="genre">MPB</p>
+              <p class="price">R$ 137,91</p>
+              <button>Comprar</button>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="album-card">
+              <img src="scr/imgs/img2.jpg" alt="The Wall" />
+              <h3>The Wall</h3>
+              <p class="artist">Pink Floyd</p>
+              <p class="genre">Rock</p>
+              <p class="price">R$ 123,56</p>
+              <button>Comprar</button>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="album-card">
+              <img src="scr/imgs/img3.jpg" alt="To Pimp a Butterfly" />
+              <h3>To Pimp a Butterfly</h3>
+              <p class="artist">Kendrick Lamar</p>
+              <p class="genre">Rap</p>
+              <p class="price">R$ 102,66</p>
+              <button>Comprar</button>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="album-card">
+              <img src="scr/imgs/img2.jpg" alt="The Wall" />
+              <h3>The Wall</h3>
+              <p class="artist">Pink Floyd</p>
+              <p class="genre">Rock</p>
+              <p class="price">R$ 123,56</p>
+              <button>Comprar</button>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="album-card">
+              <img src="scr/imgs/img_1.jpg" alt="Acabou o Chorare" />
+              <h3>Acabou o Chorare</h3>
+              <p class="artist">Novos Baianos</p>
+              <p class="genre">MPB</p>
+              <p class="price">R$ 137,91</p>
+              <button>Comprar</button>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="album-card">
+              <img src="scr/imgs/img3.jpg" alt="To Pimp a Butterfly" />
+              <h3>To Pimp a Butterfly</h3>
+              <p class="artist">Kendrick Lamar</p>
+              <p class="genre">Rap</p>
+              <p class="price">R$ 102,66</p>
+              <button>Comprar</button>
+            </div>
+          </div>
+        </section>
+        <script src="scripts/script.js"></script>
+      </main>
+    </div>
+  </body>
+</html>

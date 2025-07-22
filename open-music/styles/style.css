@@ -1,0 +1,208 @@
+:root {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #fff;
+  color: #000;
+max-height: 1024px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--brand-1);
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
+header h1 span {
+  color: var(--brand-1);
+  font-weight: 600;
+}
+
+header h1 strong {
+  color: #000;
+}
+
+#theme-toggle {
+  font-size: 1.25rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.filters h2 {
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+}
+
+.genres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.genres button {
+  padding: 0.25rem 1rem;
+  height: 32px;
+  background: var(--gray-5);
+  border: none;
+  border-radius: 32px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.genres .active,
+.genres button:hover {
+  background: var(--gray-1);
+  color: #fff;
+}
+
+.price-filter {
+  margin-bottom: 2rem;
+}
+
+.price-filter label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.range-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.price-filter input[type="range"] {
+  flex: 1;
+  height: 4px;
+  accent-color: var(--brand-1);
+}
+
+.price-filter span {
+  font-size: 0.95rem;
+  color: #000;
+}
+
+.albums h2 {
+  margin-bottom: 1.5rem;
+}
+
+.album-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.5rem;
+}
+
+.album-card {
+  background: var(--gray-6);
+  padding: 1rem;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.album-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.album-card h3 {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+.album-card .artist,
+.album-card .genre {
+  font-size: 0.875rem;
+  color: #333;
+}
+
+.album-card .price {
+  font-weight: bold;
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+}
+
+.album-card button {
+  padding: 0.5rem;
+  background: var(--brand-1);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.album-card button:hover {
+  opacity: 0.9;
+}
+
+/* DARK MODE  */
+
+body.dark-mode {
+  background: var(--gray-2);
+  color: var(--gray-6);
+}
+
+body.dark-mode header {
+  border-bottom: 2px solid var(--brand-1);
+}
+
+body.dark-mode header h1 strong {
+  color: var(--gray-6);
+}
+
+body.dark-mode .genres button {
+  background: var(--gray-4);
+  color: var(--gray-1);
+}
+
+body.dark-mode .genres .active,
+body.dark-mode .genres button:hover {
+  background: var(--brand-1);
+  color: white;
+}
+
+body.dark-mode .price-filter span {
+  color: var(--brand-1);
+}
+
+body.dark-mode .album-card {
+  background: var(--gray-3);
+  color: var(--gray-6);
+}
+
+body.dark-mode .album-card .artist,
+body.dark-mode .album-card .genre {
+  color: var(--gray-5);
+}
+
+body.dark-mode .album-card button {
+  background: var(--brand-1);
+  color: white;
+}
