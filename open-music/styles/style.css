@@ -28,6 +28,14 @@ header {
   border-bottom: 2px solid var(--brand-1);
   padding-bottom: 1rem;
   margin-bottom: 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white; /* ou var(--gray-8) para tema claro */
+  z-index: 1000;
+  padding: 1rem 2rem;
+  border-bottom: 2px solid var(--brand-1);
 }
 
 header h1 span {
@@ -40,6 +48,7 @@ header h1 strong {
 }
 
 #theme-toggle {
+  
   font-size: 1.25rem;
   cursor: pointer;
   background: none;
@@ -47,11 +56,13 @@ header h1 strong {
 }
 
 .filters h2 {
+  margin-top: 4.375rem;
   margin-bottom: 0.75rem;
   font-size: 1.1rem;
 }
 
 .genres {
+
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
@@ -59,6 +70,7 @@ header h1 strong {
 }
 
 .genres button {
+  
   padding: 0.25rem 1rem;
   height: 32px;
   background: var(--gray-5);
@@ -109,18 +121,24 @@ header h1 strong {
 
 .album-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
   gap: 1.5rem;
 }
 
 .album-card {
+  max-width: 308px;
   background: var(--gray-6);
   padding: 1rem;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  justify-content: space-between;
+  gap: 1.25rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.album-card:hover{
+background-color: var(--gray-5);
 }
 
 .album-card img {
@@ -162,15 +180,15 @@ header h1 strong {
   opacity: 0.9;
 }
 
-/* DARK MODE  */
-
+/* ========== DARK MODE ========== */
 body.dark-mode {
-  background: var(--gray-2);
+  background: var(--gray-1);
   color: var(--gray-6);
 }
 
 body.dark-mode header {
   border-bottom: 2px solid var(--brand-1);
+  background-color: var(--gray-1);
 }
 
 body.dark-mode header h1 strong {
@@ -178,14 +196,14 @@ body.dark-mode header h1 strong {
 }
 
 body.dark-mode .genres button {
-  background: var(--gray-4);
-  color: var(--gray-1);
+  background: var(--gray-3);
+  color: var(--gray-6);
 }
 
 body.dark-mode .genres .active,
 body.dark-mode .genres button:hover {
-  background: var(--brand-1);
-  color: white;
+  background: var(--gray-6);
+  color: var(--gray-1);
 }
 
 body.dark-mode .price-filter span {
@@ -197,6 +215,10 @@ body.dark-mode .album-card {
   color: var(--gray-6);
 }
 
+body.dark-mode .album-card:hover{
+background-color: var(--gray-2);
+}
+
 body.dark-mode .album-card .artist,
 body.dark-mode .album-card .genre {
   color: var(--gray-5);
@@ -205,4 +227,14 @@ body.dark-mode .album-card .genre {
 body.dark-mode .album-card button {
   background: var(--brand-1);
   color: white;
+}
+
+.a{
+  display: flex;
+  justify-content: space-between;
+}
+
+.b{
+  display: flex;
+    justify-content: space-between;
 }
