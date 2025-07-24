@@ -5,9 +5,11 @@ export async function fetchAlbums() {
       throw new Error('Erro ao buscar os dados da API');
     }
     const data = await response.json();
-    return data; // retorna o array de objetos
+    return data; // retorna o array de objetos    
   } catch (error) {
     console.error('Erro na API:', error);
     return []; // retorna array vazio se falhar
   }
 }
+
+fetchAlbums().then(data => console.log(data));
