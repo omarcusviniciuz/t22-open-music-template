@@ -1,4 +1,4 @@
-const albumList = [
+export const albumList = [
   {
     title: "Acabou o Chorare",
     genre: "MPB",
